@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package daw;
 
 import javax.swing.JOptionPane;
@@ -13,16 +12,16 @@ import javax.swing.JOptionPane;
 public class Ej1 {
 
     public static void main(String[] args) {
-        
-        String[] palabras=arrayPalabras();
-        
+
+        String[] palabras = arrayPalabras();
+
         mostrarPalabras(palabras);
     }
-    
+
     public static int numPalabras() {
-        boolean errorOpcion=true;
-        int numPalabras=0;
-        do{
+        boolean errorOpcion = true;
+        int numPalabras = 0;
+        do {
             try {
                 numPalabras = Integer.parseInt(JOptionPane.showInputDialog("Introduce "
                         + "el número de palabras que desea crear"));
@@ -32,32 +31,36 @@ public class Ej1 {
                         + "valor no númerico");
                 errorOpcion = true;
             }
-        }while(errorOpcion);
+        } while (errorOpcion);
         return numPalabras;
     }
-    
-    public static String[] arrayPalabras(){
-        String[] palabras=new String[numPalabras()];
-        
+
+    public static String[] arrayPalabras() {
+        String[] palabras = new String[numPalabras()];
+
         /*rellena el array de palabaras*/
-        for(int i=0;i<palabras.length;i++){
-            palabras[i]=JOptionPane.showInputDialog("Introduce una palabra");
+        for (int i = 0; i < palabras.length; i++) {
+            palabras[i] = JOptionPane.showInputDialog("Introduce una palabra");
         }
         return palabras;
     }
-    
-    public static void mostrarPalabras(String[] arrayPalabras){
-        
-        String[] palabras=arrayPalabras;
-        String aux="";
-        for (int i = 0; i < palabras.length; i++) {
-            
-            aux+=("Posición "+i+" "+palabras[i]+("\n"));
-           
+
+    public static void mostrarPalabras(String[] arrayPalabras) {
+
+        String[] palabras = arrayPalabras;
+        String aux = "";
+        for (int i = 0; i < palabras.length; i++) {/*Actualiza mi String y le añade
+            todas las palabras en cada iteracion*/
+            aux += ("Posición " + i + " " + palabras[i] + ("\n"));
         }
-         JOptionPane.showMessageDialog(null,aux);
-        
-        
+        JOptionPane.showMessageDialog(null, aux);
+    }
+
+    public static int cuentaVocales(String palabras) {
+        int contador=0;
+        for(int i=0; i<palabras.length();i++){
+            if()
+        }
+        return 
     }
 }
-
