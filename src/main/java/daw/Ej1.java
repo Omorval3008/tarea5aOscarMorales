@@ -32,5 +32,15 @@ public class Ej1 {
         }while(errorOpcion);
         return numPalabras;
     }
+    
+    public static String[] arrayPalabras(){
+        String[] palabras=new String[numPalabras()];
+        
+        /*rellena el array de palabaras*/
+        for(int i=0;i<palabras.length;i++){
+            palabras[i]=JOptionPane.showInputDialog("Introduce una palabra");
+        }
+        return palabras;
+    }
 }
 
