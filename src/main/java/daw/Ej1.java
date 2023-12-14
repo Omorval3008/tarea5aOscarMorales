@@ -13,7 +13,10 @@ import javax.swing.JOptionPane;
 public class Ej1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        String[] palabras=arrayPalabras();
+        
+        mostrarPalabras(palabras);
     }
     
     public static int numPalabras() {
@@ -41,6 +44,20 @@ public class Ej1 {
             palabras[i]=JOptionPane.showInputDialog("Introduce una palabra");
         }
         return palabras;
+    }
+    
+    public static void mostrarPalabras(String[] arrayPalabras){
+        
+        String[] palabras=arrayPalabras;
+        String aux="";
+        for (int i = 0; i < palabras.length; i++) {
+            
+            aux+=("Posición "+i+" "+palabras[i]+("\n"));
+           
+        }
+         JOptionPane.showMessageDialog(null,aux);
+        
+        
     }
 }
 
